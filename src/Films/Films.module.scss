@@ -1,0 +1,8 @@
+.catalog_films{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title{
+        text-align: center;
+    }
+}

@@ -1,0 +1,15 @@
+.films {
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    padding: 2vw;
+    &__title{
+        text-align: center;
+    }
+    &__img {
+        width: 31vw;
+        height: 50vh;
+        gap: 1vw;
+        flex-wrap: wrap;
+    }
+}

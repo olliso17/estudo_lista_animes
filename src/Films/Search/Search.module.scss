@@ -2,9 +2,14 @@
     display: flex;
     align-items:center;
     justify-content: space-around;
-    width: 13.5vw;
     border-style: solid;
+    height: 3vh;
+    width: 15vw;
     border-radius: 0.5vw;
     border-width: 0.1vw;
-    background-color: blueviolet;
+
+    &__input{
+        margin: 0.2vw;
+        width: 90%;
+    }
 }

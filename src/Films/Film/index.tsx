@@ -3,13 +3,13 @@ import api from "../../services/api";
 import IFilm from "../interfaces/IFilm";
 import styles from "./Film.module.scss";
 
-interface Props{
+interface Props {
     titleFilm: string,
 }
 
-export default function Film({titleFilm}:Props) {
-    
-    const [list, setList] = useState<IFilm|any>([]);
+export default function Film({ titleFilm }: Props) {
+
+    const [list, setList] = useState<IFilm | any>([]);
 
     const getApi = async () => {
         await api.get("/films")
@@ -23,21 +23,26 @@ export default function Film({titleFilm}:Props) {
         const regex = new RegExp(titleFilm, 'i');
         return regex.test(title);
     }
-    const newList = list.filter(film => testFilms(film.title));
-   
+
+
     useEffect(() => {
-        getApi(); 
+        getApi();
+        const newList = list.filter(film => testFilms(film.title));
         setList(newList);
     }, [titleFilm]);
 
     return (
-        <section className={styles.films}>
-            {list.map(film => (
-                <div key={film.id}>
-                    <h3 className={styles.films__title}>{film.title}</h3>
-                    <img className={styles.films__img} src={film.image} alt={film.title} />
-                </div>
-            ))}
-        </section>
+        <div className={styles.films}>
+            {
+                list.map(film => (
+                    <button className={styles.films__film} onClick={()=>console.log('clicou')}>
+                        <div  key={film.id}>
+                            <h3 className={styles.films__title}>{film.title} ({film.original_title})</h3>
+                            <img className={styles.films__img} src={film.image} alt={film.title} />
+
+                        </div>
+                    </button>
+                ))}
+        </div>
     )
 }

@@ -10,7 +10,7 @@ export default function Search({titleFilm, setFilms}:Props) {
 
     return (
         <div className={styles.search}>
-            <input type="text" onChange={event=>setFilms(event.target.value)}/>
+            <input  className={styles.search__input} type="text" onChange={event=>setFilms(event.target.value)}/>
             <span>
                 <MdOutlineSearch />
             </span>

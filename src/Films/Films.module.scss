@@ -5,9 +5,10 @@
     &__title{
         text-align: center;
     }
-    &__section{
+    &__menu{
+        width: 100vw;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-around;
     }
+    
 }

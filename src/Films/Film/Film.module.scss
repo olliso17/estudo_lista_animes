@@ -5,11 +5,23 @@
     padding: 2vw;
     &__title{
         text-align: center;
+        color: white;
     }
     &__img {
-        width: 31vw;
+        width: 30vw;
         height: 50vh;
         gap: 1vw;
         flex-wrap: wrap;
+        object-fit: cover;
+        border-radius: 1vw;
+    }
+    &__film{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-style: solid;
+        border-radius: 1vw;
+        border-width: 0.1vw;
+        background: black;
     }
 }
